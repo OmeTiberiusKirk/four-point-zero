@@ -74,14 +74,13 @@
   --radius-4xl: calc(var(--radius) + 16px);
   
   --font-psk: psk;
-  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-wiggle: wiggle 1s ease-in-out;
   @keyframes wiggle {
-    0%,
-    50% {
-      transform: translate(-220px, 0px);
+    0% {
+      transform: translate(-100%, 0px);
     }
     100% {
-      transform: translate(200px, 200px);
+      transform: translate(0px, 0px);
     }
   }
 }
