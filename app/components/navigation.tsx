@@ -5,7 +5,16 @@ import { Bars } from "./icons";
 
 export function Navigation() {
   return (
-    <div className={["sticky", "top-0", "flex", "justify-end"].join(" ")}>
+    <div
+      className={[
+        "fixed",
+        "top-0",
+        "flex",
+        "justify-end",
+        "w-full",
+        "max-w-5xl",
+      ].join(" ")}
+    >
       <Button
         className={["rounded-none", "text-2xl", "font-bold"].join(" ")}
         size="lg"
