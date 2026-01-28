@@ -13,6 +13,7 @@ export function Navigation() {
         "justify-end",
         "w-full",
         "max-w-5xl",
+        "z-10",
       ].join(" ")}
     >
       <Button
