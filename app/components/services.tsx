@@ -2,7 +2,7 @@ import { twMerge } from "tailwind-merge";
 
 export default function Services() {
   return (
-    <div className={twMerge(["min-h-screen"])}>
+    <div className={twMerge(["min-h-screen", "px-5", "mb-50"])}>
       <h1 className={twMerge(["text-[2.8em]", "font-bold", "text-[#BC180C]"])}>
         การบริการ
       </h1>
