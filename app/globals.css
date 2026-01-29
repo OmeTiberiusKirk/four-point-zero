@@ -45,44 +45,39 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  --default-font-family: "IBM Plex Sans";
-  --animate-slideFromLeft: slideFromLeft 1s ease-in-out;
-  --animate-slideFromRight: slideFromRight 1s ease-in-out;
-  --animate-slideFromBottom: slideFromBottom 1s ease-in-out;
+  --animate-to-right: to-right 1s ease-in-out;
+  --animate-to-left: to-left 1s ease-in-out;
+  --animate-to-top: to-top 1s ease-in-out;
 
-  @keyframes slideFromLeft {
+  @keyframes to-right {
     0% {
-      transform: translate(-100%, 0px);
+      transform: translate(-100%, 0);
       opacity: 0;
     }
     100% {
-      transform: translate(0%, 0px);
+      transform: translate(0, 0);
       opacity: 1;
     }
   }
 
-  @keyframes slideFromRight {
+  @keyframes to-left {
     0% {
-      transform: translate(100%, 0px);
+      transform: translate(100%, 0);
       opacity: 0;
     }
     100% {
-      transform: translate(0px, 0px);
+      transform: translate(0, 0);
       opacity: 1;
     }
   }
 
-  @keyframes slideFromBottom {
+  @keyframes to-top {
     0% {
-      /* transform: translate(0px, 100%); */
-      position: absolute;
-      bottom: 0;
+      transform: translate(0, 600px);
       /* opacity: 0; */
     }
     100% {
-      /* transform: translate(0px, 0px); */
-      position: absolute;
-      bottom: 200px;
+      transform: translate(0, 0);
       /* opacity: 1; */
     }
   }
@@ -176,4 +171,8 @@
   );
 
   background-attachment: fixed;
+}
+
+body {
+  overflow-x: hidden; 
 }

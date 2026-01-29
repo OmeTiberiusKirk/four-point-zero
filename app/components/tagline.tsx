@@ -1,8 +1,47 @@
 "use client";
 
+import { animate, createTimeline } from "animejs";
+import { useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 
 export default function Tagline() {
+  useEffect(() => {
+    // sat
+    animate("#sat", {
+      opacity: [{ to: 1, ease: "out", delay: 500 }],
+      x: [{ to: "-100%" }, { to: 0, ease: "outExpo" }],
+    });
+
+    // success
+    animate("#success", {
+      opacity: [{ to: 1, ease: "out", delay: 500 }],
+      x: [
+        { to: "100%", ease: "out" },
+        { to: 0, ease: "out" },
+      ],
+    });
+
+    animate("#exp", {
+      opacity: [{ to: 1, ease: "out", delay: 500 }],
+      y: [{ to: window.innerHeight }, { to: 0, ease: "out" }],
+    });
+
+    const sat_tl = createTimeline({
+      autoplay: false,
+      // onUpdate: (self) => {
+      //   if (self.currentTime >= 1500) self.pause();
+      // },
+    }).add("#test", {
+      opacity: [{ to: 0, duration: 300 }],
+      scale: [{ to: 3, ease: "inOut" }],
+      y: [{ to: window.innerHeight - 300 }],
+    });
+
+    window.addEventListener("scroll", () => {
+      sat_tl.seek(window.pageYOffset);
+    });
+  }, []);
+
   return (
     <div
       className={twMerge([
@@ -13,19 +52,25 @@ export default function Tagline() {
       ])}
     >
       <div
-        className={twMerge(["relative", "flex", "flex-col", "items-center"])}
+        id="test"
+        className={twMerge([
+          "relative",
+          "flex",
+          "flex-col",
+          "items-center",
+          "w-full",
+          "left-0",
+        ])}
       >
         <div
-          className={twMerge([
-            "flex",
-            "items-baseline",
-            "animate-slideFromLeft",
-          ])}
+          id="sat"
+          className={twMerge(["flex", "items-baseline"])}
           style={{
             background: "linear-gradient(90deg, #240b36 0.3%, #c31432 102.17%)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
+            opacity: 0,
           }}
         >
           <h1
@@ -43,17 +88,15 @@ export default function Tagline() {
         </div>
 
         <div
+          id="success"
           style={{
             background: "linear-gradient(90deg, #B80120 0%, #D8092C 100%)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
+            opacity: 0,
           }}
-          className={twMerge([
-            "animate-slideFromRight",
-            "flex",
-            "items-baseline",
-          ])}
+          className={twMerge(["flex", "items-baseline"])}
         >
           <h1 className={twMerge(["text-[2em]", "md:text-[3em]", "font-bold"])}>
             คือความสำเร็จของเรา
@@ -71,6 +114,7 @@ export default function Tagline() {
         </div>
 
         <blockquote
+          id="exp"
           className={twMerge([
             "mt-4",
             "border-l-3",
@@ -79,6 +123,7 @@ export default function Tagline() {
             "border-l-red-600",
             "text-col",
             "text-red-700",
+            "opacity-0",
           ])}
         >
           Customer Experience <br />
@@ -99,6 +144,8 @@ export default function Tagline() {
             "bottom-0",
             "md:right-20",
             "lg:right-40",
+            "hidden",
+            "sm:inline-block",
           ])}
         >
           <g clipPath="url(#clip0_942_12613)">
