@@ -7,16 +7,19 @@ import { twMerge } from "tailwind-merge";
 export default function Tagline() {
   useEffect(() => {
     // sat
-    // animate("#sat", {
-    //   // opacity: [{ to: 1, ease: "out", delay: 500 }],
-    //   x: [{ to: "100%", ease: "outExpo" }],
-    // });
+    animate("#sat", {
+      opacity: [{ to: 1, ease: "out" }],
+      x: [
+        { from: "-100%", ease: "out" },
+        { to: 0, ease: "out" },
+      ],
+    });
 
     // success
     animate("#success", {
-      opacity: [{ to: 1, ease: "out", delay: 500 }],
+      opacity: [{ to: 1, ease: "out" }],
       x: [
-        { to: "100%", ease: "out" },
+        { from: "100%", ease: "out" },
         { to: 0, ease: "out" },
       ],
     });
@@ -59,19 +62,12 @@ export default function Tagline() {
           "flex-col",
           "items-center",
           "w-full",
-          "h-full",
           "left-0",
         ])}
       >
         <div
           id="sat"
-          className={twMerge([
-            "flex",
-            "items-baseline",
-            "absolute",
-            "left-0",
-            "top-5/12",
-          ])}
+          className={twMerge(["flex", "items-baseline", "opacity-0"])}
           style={{
             background: "linear-gradient(90deg, #240b36 0.3%, #c31432 102.17%)",
             backgroundClip: "text",
@@ -116,14 +112,14 @@ export default function Tagline() {
               "text-[1.7em]",
               "md:text-[3em]",
               "font-bold",
-              "md:mr-10",
+              // "md:mr-10",
             ])}
           >
             ”
           </h1>
         </div>
 
-        {/* <blockquote
+        <blockquote
           id="exp"
           className={twMerge([
             "mt-4",
@@ -140,7 +136,7 @@ export default function Tagline() {
         >
           Customer Experience <br />
           สร้างประสบการณ์ที่ดีให้กับลูกค้า
-        </blockquote> */}
+        </blockquote>
 
         {/* <svg
           fill="none"
