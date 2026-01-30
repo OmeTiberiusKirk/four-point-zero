@@ -34,7 +34,7 @@ export default function Tagline() {
     }).add("#test", {
       opacity: [{ to: 0, duration: 300 }],
       scale: [{ to: 3, ease: "inOut" }],
-      y: [{ to: window.innerHeight - 300 }],
+      y: [{ to: window.innerHeight - 400 }],
     });
 
     window.addEventListener("scroll", () => {
@@ -58,8 +58,8 @@ export default function Tagline() {
           "flex",
           "flex-col",
           "items-center",
-          "w-full",
-          "left-0",
+          // "w-full",
+          "overflow-hidden",
         ])}
       >
         <div
@@ -75,14 +75,16 @@ export default function Tagline() {
         >
           <h1
             className={twMerge([
-              "text-[2.5em]",
+              "text-[1.5em]",
               "md:text-[3.5em]",
               "font-bold",
             ])}
           >
             “ความพึงพอใจ
           </h1>
-          <h1 className={twMerge(["text-[2em]", "md:text-[3em]", "font-bold"])}>
+          <h1
+            className={twMerge(["text-[1.5em]", "md:text-[3em]", "font-bold"])}
+          >
             ของท่าน
           </h1>
         </div>
@@ -98,12 +100,14 @@ export default function Tagline() {
           }}
           className={twMerge(["flex", "items-baseline"])}
         >
-          <h1 className={twMerge(["text-[2em]", "md:text-[3em]", "font-bold"])}>
+          <h1
+            className={twMerge(["text-[1.5em]", "md:text-[3em]", "font-bold"])}
+          >
             คือความสำเร็จของเรา
           </h1>
           <h1
             className={twMerge([
-              "text-[2em]",
+              "text-[1.5em]",
               "md:text-[3em]",
               "font-bold",
               "md:mr-10",
@@ -124,6 +128,8 @@ export default function Tagline() {
             "text-col",
             "text-red-700",
             "opacity-0",
+            "text-[0.8em]",
+            "md:text-[1em]",
           ])}
         >
           Customer Experience <br />
