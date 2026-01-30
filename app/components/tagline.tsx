@@ -49,6 +49,7 @@ export default function Tagline() {
         "flex",
         "flex-col",
         "justify-center",
+        "overflow-hidden",
       ])}
     >
       <div
@@ -83,7 +84,7 @@ export default function Tagline() {
             “ความพึงพอใจ
           </h1>
           <h1
-            className={twMerge(["text-[1.5em]", "md:text-[3em]", "font-bold"])}
+            className={twMerge(["text-[1.7em]", "md:text-[3em]", "font-bold"])}
           >
             ของท่าน
           </h1>
@@ -101,13 +102,13 @@ export default function Tagline() {
           className={twMerge(["flex", "items-baseline"])}
         >
           <h1
-            className={twMerge(["text-[1.5em]", "md:text-[3em]", "font-bold"])}
+            className={twMerge(["text-[1.7em]", "md:text-[3em]", "font-bold"])}
           >
             คือความสำเร็จของเรา
           </h1>
           <h1
             className={twMerge([
-              "text-[1.5em]",
+              "text-[1.7em]",
               "md:text-[3em]",
               "font-bold",
               "md:mr-10",
