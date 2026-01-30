@@ -7,10 +7,10 @@ import { twMerge } from "tailwind-merge";
 export default function Tagline() {
   useEffect(() => {
     // sat
-    animate("#sat", {
-      opacity: [{ to: 1, ease: "out", delay: 500 }],
-      x: [{ to: "-100%" }, { to: 0, ease: "outExpo" }],
-    });
+    // animate("#sat", {
+    //   // opacity: [{ to: 1, ease: "out", delay: 500 }],
+    //   x: [{ to: "100%", ease: "outExpo" }],
+    // });
 
     // success
     animate("#success", {
@@ -34,12 +34,11 @@ export default function Tagline() {
     }).add("#test", {
       opacity: [{ to: 0, duration: 300 }],
       scale: [{ to: 3, ease: "inOut" }],
-      y: [{ to: window.innerHeight - 400 }],
     });
 
-    window.addEventListener("scroll", () => {
-      sat_tl.seek(window.pageYOffset);
-    });
+    // window.addEventListener("scroll", () => {
+    //   sat_tl.seek(window.pageYOffset);
+    // });
   }, []);
 
   return (
@@ -50,28 +49,34 @@ export default function Tagline() {
         "flex-col",
         "justify-center",
         "overflow-hidden",
+        "relative",
       ])}
     >
       <div
-        id="test"
         className={twMerge([
-          "relative",
+          "fixed",
           "flex",
           "flex-col",
           "items-center",
-          // "w-full",
-          "overflow-hidden",
+          "w-full",
+          "h-full",
+          "left-0",
         ])}
       >
         <div
           id="sat"
-          className={twMerge(["flex", "items-baseline"])}
+          className={twMerge([
+            "flex",
+            "items-baseline",
+            "absolute",
+            "left-0",
+            "top-5/12",
+          ])}
           style={{
             background: "linear-gradient(90deg, #240b36 0.3%, #c31432 102.17%)",
             backgroundClip: "text",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            opacity: 0,
           }}
         >
           <h1
@@ -118,7 +123,7 @@ export default function Tagline() {
           </h1>
         </div>
 
-        <blockquote
+        {/* <blockquote
           id="exp"
           className={twMerge([
             "mt-4",
@@ -135,24 +140,19 @@ export default function Tagline() {
         >
           Customer Experience <br />
           สร้างประสบการณ์ที่ดีให้กับลูกค้า
-        </blockquote>
+        </blockquote> */}
 
-        <svg
-          // width="255"
-          // height="162"
-          viewBox="0 0 255 162"
+        {/* <svg
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className={twMerge([
             "w-25",
             "md:w-35",
+            // "md:right-20",
+            // "lg:right-40",
             "absolute",
-            "right-5",
+            "left-0",
             "bottom-0",
-            "md:right-20",
-            "lg:right-40",
-            "hidden",
-            "sm:inline-block",
           ])}
         >
           <g clipPath="url(#clip0_942_12613)">
@@ -183,7 +183,7 @@ export default function Tagline() {
               />
             </clipPath>
           </defs>
-        </svg>
+        </svg> */}
       </div>
     </div>
   );

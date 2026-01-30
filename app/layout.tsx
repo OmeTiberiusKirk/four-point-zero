@@ -33,7 +33,7 @@ export default function RootLayout({
         <Navigation />
         <main
           id="main"
-          className={twMerge(["w-full", "max-w-5xl", "shadow-xl"])}
+          className={twMerge(["w-full", "max-w-7xl", "shadow-xl"])}
         >
           {children}
         </main>
