@@ -1,0 +1,12 @@
+services:
+  nextjs_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    restart: always
+    environment:
+      # Define your production environment variables here
+      NODE_ENV: production
+      # Example: NEXT_PUBLIC_API_URL: "https://api.yourdomain.com"
