@@ -4,18 +4,20 @@ import { twMerge } from "tailwind-merge";
 
 export default function Services() {
   return (
-    <div style={{ minHeight: "calc(100vh * 3)" }}>
+    <div style={{ minHeight: "calc(100vh * 2.5)" }}>
       <div
+        id="service-container"
         className={twMerge([
           "fixed",
           "w-full",
           "max-w-7xl",
           "top-0",
           "min-h-screen",
+          "px-5",
         ])}
       >
         <div
-          id="service-container"
+          id="service-heading-container"
           className={twMerge([
             "absolute",
             "w-full",
@@ -26,7 +28,7 @@ export default function Services() {
           ])}
         >
           <div
-            id="service"
+            id="service-heading"
             className={twMerge(["align-baseline", "opacity-0"])}
           >
             <span
@@ -54,7 +56,7 @@ export default function Services() {
           </div>
         </div>
 
-        <p id="descr" className={twMerge(["max-w-2xs", "opacity-0"])}>
+        <p id="descr" className={twMerge(["max-w-2xs", "opacity-0", "mt-45"])}>
           เรามีผู้เชี่ยวชาญด้านการวางระบบสารสนเทศ ออกแบบ จัดหา ติดตั้ง
           บริหารจัดการและซ่อมบำรุง โดยทีมงานผู้ชำนาญ
         </p>
