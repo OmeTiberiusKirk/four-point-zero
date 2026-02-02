@@ -1,4 +1,5 @@
-import { createTimeline } from "animejs";
+import { createTimeline, utils } from "animejs";
+import { twMerge } from "tailwind-merge";
 
 // tagline
 const create_sat_tl = () =>
@@ -52,23 +53,47 @@ const create_glider_tl = () =>
       scale: 3,
       y: -window.innerHeight,
       x: window.innerWidth,
+      duration: 2000,
     });
 
 //services
-const create_service_heading_tl = () => createTimeline({
-  defaults: {ease: "out"}
-}).add("#service", {
-      opacity: 1,
-      x: [{ from: "50%", to: 0 }],
-      y: [{ from: "50%", to: 0 }],
-    })
+const create_service_heading_tl = () => {
+  const [$con] = utils.$("#service-container");
+  const [$sv] = utils.$("#service");
 
-const create_service_tl = () => createTimeline({
-      defaults: { ease: "out" },
-    }).add("#descr", {
-      opacity: 1
-    }).add("#sv", {
-      opacity: 1
+  return createTimeline({
+    defaults: { ease: "out" },
+  })
+    .add("#service", {
+      opacity: 1,
+      x: -($con.clientWidth / 2 - ($sv.clientWidth / 2 + 20)),
+      y: -($con.clientHeight / 2 - $sv.clientHeight * 1.5),
+    })
+    .add(
+      "#service :first-child",
+      {
+        y: "-70%",
+      },
+      "-=1000",
+    )
+    .add(
+      "#service :last-child",
+      {
+        x: "-100%",
+      },
+      "-=500",
+    );
+};
+
+const create_service_tl = () =>
+  createTimeline({
+    defaults: { ease: "out" },
+  })
+    .add("#descr", {
+      opacity: 1,
+    })
+    .add("#sv", {
+      opacity: 1,
     });
 
 export {
@@ -77,5 +102,5 @@ export {
   create_exp_tl,
   create_glider_tl,
   create_service_heading_tl,
-  create_service_tl
+  create_service_tl,
 };

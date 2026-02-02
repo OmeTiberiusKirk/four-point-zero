@@ -4,44 +4,76 @@ import { twMerge } from "tailwind-merge";
 
 export default function Services() {
   return (
-    <div className={twMerge(["min-h-screen", "px-5", "my-30"])}>
-      <div id="service" className={twMerge(["opacity-0"])}>
-        <h1
-          className={twMerge(["text-[2.8em]", "font-bold", "text-[#BC180C]"])}
-        >
-          การบริการ
-        </h1>
-        <h1
-          className={twMerge([
-            "text-[2em]",
-            "font-bold",
-            "text-[#BC180C]",
-            "mb-5",
-          ])}
-        >
-          (Service)
-        </h1>
-      </div>
-
-      <p id="descr" className={twMerge(["max-w-2xs", "opacity-0"])}>
-        เรามีผู้เชี่ยวชาญด้านการวางระบบสารสนเทศ ออกแบบ จัดหา ติดตั้ง
-        บริหารจัดการและซ่อมบำรุง โดยทีมงานผู้ชำนาญ
-      </p>
-
+    <div style={{ minHeight: "calc(100vh * 3)" }}>
       <div
-        id="sv"
         className={twMerge([
-          "mt-5",
-          "grid",
-          "sm:grid-cols-2",
-          "gap-3",
-          "sm:max-w-3/5",
-          "opacity-0",
+          "fixed",
+          "w-full",
+          "max-w-7xl",
+          "top-0",
+          "min-h-screen",
         ])}
       >
-        {services.map((service, k) => (
-          <Service key={k} index={k} service={service} />
-        ))}
+        <div
+          id="service-container"
+          className={twMerge([
+            "absolute",
+            "w-full",
+            "h-full",
+            "flex",
+            "justify-center",
+            "items-center",
+          ])}
+        >
+          <div
+            id="service"
+            className={twMerge(["align-baseline", "opacity-0"])}
+          >
+            <span
+              className={twMerge([
+                "text-[2.8em]",
+                "font-bold",
+                "text-[#BC180C]",
+                "inline-block",
+              ])}
+            >
+              การบริการ
+            </span>
+            &nbsp;
+            <span
+              className={twMerge([
+                "text-[2em]",
+                "font-bold",
+                "text-[#BC180C]",
+                "mb-5",
+                "inline-block",
+              ])}
+            >
+              (Service)
+            </span>
+          </div>
+        </div>
+
+        <p id="descr" className={twMerge(["max-w-2xs", "opacity-0"])}>
+          เรามีผู้เชี่ยวชาญด้านการวางระบบสารสนเทศ ออกแบบ จัดหา ติดตั้ง
+          บริหารจัดการและซ่อมบำรุง โดยทีมงานผู้ชำนาญ
+        </p>
+
+        <div
+          id="sv"
+          className={twMerge([
+            "mt-5",
+            "grid",
+            "sm:grid-cols-2",
+            "gap-3",
+            "sm:max-w-3/5",
+            "opacity-0",
+          ])}
+        >
+          {services.map((service, k) => (
+            <Service key={k} index={k} service={service} />
+          ))}
+        </div>
       </div>
     </div>
   );

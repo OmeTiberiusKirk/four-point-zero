@@ -27,7 +27,7 @@ export default function Tagline() {
 
     const main_tl = createTimeline({
       onUpdate: (self) => {
-        console.log(self.currentTime);
+        // console.log(self.currentTime);
         if (self.currentTime >= 1000) self.pause();
       },
     })
@@ -36,14 +36,14 @@ export default function Tagline() {
       .sync(exp_tl, 0)
       .sync(glider_tl, 0)
       .sync(sv_h_tl, 2500)
-      .sync(sv_tl, 2500);
+      .sync(sv_tl, 3000);
 
     window.addEventListener("scroll", () => {
-      main_tl.seek(offset + window.pageYOffset * 3);
+      main_tl.seek(offset + window.pageYOffset * 2);
     });
 
     if (window.pageYOffset > 0) {
-      main_tl.seek(offset + window.pageYOffset * 3);
+      main_tl.seek(offset + window.pageYOffset * 2);
     }
   }, []);
 
@@ -110,12 +110,7 @@ export default function Tagline() {
             คือความสำเร็จของเรา
           </h1>
           <h1
-            className={twMerge([
-              "text-[1.7em]",
-              "md:text-[3em]",
-              "font-bold",
-              // "md:mr-10",
-            ])}
+            className={twMerge(["text-[1.7em]", "md:text-[3em]", "font-bold"])}
           >
             ”
           </h1>
