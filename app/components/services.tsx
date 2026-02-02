@@ -1,33 +1,42 @@
+"use client";
+
 import { twMerge } from "tailwind-merge";
 
 export default function Services() {
   return (
-    <div className={twMerge(["min-h-screen", "px-5", "mb-30"])}>
-      <h1 className={twMerge(["text-[2.8em]", "font-bold", "text-[#BC180C]"])}>
-        การบริการ
-      </h1>
-      <h1
-        className={twMerge([
-          "text-[2em]",
-          "font-bold",
-          "text-[#BC180C]",
-          "mb-5",
-        ])}
-      >
-        (Service)
-      </h1>
-      <p className={twMerge(["max-w-2xs"])}>
+    <div className={twMerge(["min-h-screen", "px-5", "my-30"])}>
+      <div id="service" className={twMerge(["opacity-0"])}>
+        <h1
+          className={twMerge(["text-[2.8em]", "font-bold", "text-[#BC180C]"])}
+        >
+          การบริการ
+        </h1>
+        <h1
+          className={twMerge([
+            "text-[2em]",
+            "font-bold",
+            "text-[#BC180C]",
+            "mb-5",
+          ])}
+        >
+          (Service)
+        </h1>
+      </div>
+
+      <p id="descr" className={twMerge(["max-w-2xs", "opacity-0"])}>
         เรามีผู้เชี่ยวชาญด้านการวางระบบสารสนเทศ ออกแบบ จัดหา ติดตั้ง
         บริหารจัดการและซ่อมบำรุง โดยทีมงานผู้ชำนาญ
       </p>
 
       <div
+        id="sv"
         className={twMerge([
           "mt-5",
           "grid",
           "sm:grid-cols-2",
           "gap-3",
           "sm:max-w-3/5",
+          "opacity-0",
         ])}
       >
         {services.map((service, k) => (

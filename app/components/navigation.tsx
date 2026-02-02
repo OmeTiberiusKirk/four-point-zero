@@ -12,7 +12,7 @@ export function Navigation() {
         "flex",
         "justify-end",
         "w-full",
-        "max-w-5xl",
+        "max-w-7xl",
         "z-10",
       ].join(" ")}
     >

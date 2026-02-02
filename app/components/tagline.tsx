@@ -1,6 +1,6 @@
 "use client";
 
-import { animate, createTimeline } from "animejs";
+import { createTimeline } from "animejs";
 import { useEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import glider from "../../images/glider.png";
@@ -9,6 +9,8 @@ import {
   create_exp_tl,
   create_glider_tl,
   create_sat_tl,
+  create_service_heading_tl,
+  create_service_tl,
   create_success_tl,
 } from "@/lib/timelines";
 
@@ -20,6 +22,9 @@ export default function Tagline() {
     const success_tl = create_success_tl();
     const exp_tl = create_exp_tl();
     const glider_tl = create_glider_tl();
+    const sv_h_tl = create_service_heading_tl();
+    const sv_tl = create_service_tl();
+
     const main_tl = createTimeline({
       onUpdate: (self) => {
         console.log(self.currentTime);
@@ -29,7 +34,9 @@ export default function Tagline() {
       .sync(sat_tl)
       .sync(success_tl, 0)
       .sync(exp_tl, 0)
-      .sync(glider_tl, 0);
+      .sync(glider_tl, 0)
+      .sync(sv_h_tl, 2500)
+      .sync(sv_tl, 2500);
 
     window.addEventListener("scroll", () => {
       main_tl.seek(offset + window.pageYOffset * 3);

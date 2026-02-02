@@ -1,5 +1,6 @@
 import { createTimeline } from "animejs";
 
+// tagline
 const create_sat_tl = () =>
   createTimeline({ defaults: { ease: "out" } })
     .add("#sat", {
@@ -53,4 +54,28 @@ const create_glider_tl = () =>
       x: window.innerWidth,
     });
 
-export { create_sat_tl, create_success_tl, create_exp_tl, create_glider_tl };
+//services
+const create_service_heading_tl = () => createTimeline({
+  defaults: {ease: "out"}
+}).add("#service", {
+      opacity: 1,
+      x: [{ from: "50%", to: 0 }],
+      y: [{ from: "50%", to: 0 }],
+    })
+
+const create_service_tl = () => createTimeline({
+      defaults: { ease: "out" },
+    }).add("#descr", {
+      opacity: 1
+    }).add("#sv", {
+      opacity: 1
+    });
+
+export {
+  create_sat_tl,
+  create_success_tl,
+  create_exp_tl,
+  create_glider_tl,
+  create_service_heading_tl,
+  create_service_tl
+};
