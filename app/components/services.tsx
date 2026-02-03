@@ -1,6 +1,8 @@
-"use client";
-
 import { cn } from "@/lib/utils";
+import circle from "../../images/circle.png";
+import square from "../../images/square.png";
+import triangle from "../../images/triangle.png";
+import Image from "next/image";
 
 export default function Services() {
   return (
@@ -75,6 +77,79 @@ export default function Services() {
             <Service key={k} index={k} service={service} />
           ))}
         </div>
+
+        <Image
+          src={circle}
+          alt=""
+          className={cn(
+            "absolute",
+            "md:w-32",
+            "shapes",
+            "right-0",
+            "top-1/3",
+            "opacity-0",
+          )}
+        />
+        <Image
+          src={square}
+          alt=""
+          className={cn(
+            "absolute",
+            "md:w-32",
+            "shapes",
+            "right-0",
+            "top-1/3",
+            "opacity-0",
+          )}
+        />
+        <Image
+          src={triangle}
+          alt=""
+          className={cn(
+            "absolute",
+            "md:w-32",
+            "shapes",
+            "right-0",
+            "top-1/3",
+            "opacity-0",
+          )}
+        />
+        <Image
+          src={circle}
+          alt=""
+          className={cn(
+            "absolute",
+            "md:w-32",
+            "shapes",
+            "right-0",
+            "top-1/4",
+            "opacity-0",
+          )}
+        />
+        <Image
+          src={square}
+          alt=""
+          className={cn(
+            "absolute",
+            "md:w-32",
+            "shapes",
+            "right-0",
+            "top-1/4",
+            "opacity-0",
+          )}
+        />
+        <Image
+          src={triangle}
+          alt=""
+          className={cn(
+            "absolute",
+            "md:w-32",
+            "shapes",
+            "right-0",
+            "top-1/4",
+            "opacity-0",
+          )}
+        />
       </div>
     </div>
   );

@@ -57,7 +57,7 @@ const create_glider_tl = () =>
     });
 
 //services
-const create_service_heading_tl = () => {
+const create_services_heading_tl = () => {
   const [$con] = utils.$("#services-heading-container");
   const [$svh] = utils.$("#services-heading");
 
@@ -85,7 +85,7 @@ const create_service_heading_tl = () => {
     );
 };
 
-const create_service_tl = () => {
+const create_services_tl = () => {
   const is_mobile = is_mobile_view();
 
   return createTimeline({
@@ -102,16 +102,25 @@ const create_service_tl = () => {
       },
       "-=500",
     )
-    .add("#services-container", {
-      y: is_mobile ? "-90%" : "-100%",
-    });
+    .add(
+      "#services-container",
+      {
+        y: is_mobile ? "-90%" : "-100%",
+        ...(is_mobile && { duration: 3000 }),
+      },
+      "-=500",
+    );
 };
+
+// const create_shapes_tl = () => {
+//   return createTimeline();
+// };
 
 export {
   create_sat_tl,
   create_success_tl,
   create_exp_tl,
   create_glider_tl,
-  create_service_heading_tl,
-  create_service_tl,
+  create_services_heading_tl,
+  create_services_tl,
 };
