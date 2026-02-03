@@ -1,4 +1,4 @@
-import { createTimeline, utils } from "animejs";
+import { createTimeline, stagger, utils } from "animejs";
 import { is_mobile_view } from "./utils";
 
 // tagline
@@ -58,26 +58,26 @@ const create_glider_tl = () =>
 
 //services
 const create_service_heading_tl = () => {
-  const [$con] = utils.$("#service-heading-container");
-  const [$svh] = utils.$("#service-heading");
+  const [$con] = utils.$("#services-heading-container");
+  const [$svh] = utils.$("#services-heading");
 
   return createTimeline({
     defaults: { ease: "out" },
   })
-    .add("#service-heading", {
+    .add("#services-heading", {
       opacity: 1,
       x: -($con.clientWidth / 2 - ($svh.clientWidth / 2 + 10)),
       y: -($con.clientHeight / 2 - $svh.clientHeight * 1.7),
     })
     .add(
-      "#service-heading :first-child",
+      "#services-heading :first-child",
       {
         y: "-70%",
       },
       "-=1000",
     )
     .add(
-      "#service-heading :last-child",
+      "#services-heading :last-child",
       {
         x: "-100%",
       },
@@ -94,10 +94,15 @@ const create_service_tl = () => {
     .add("#descr", {
       opacity: 1,
     })
-    .add("#sv", {
-      opacity: 1,
-    })
-    .add("#service-container", {
+    .add(
+      "#services-list > div",
+      {
+        delay: stagger(200),
+        opacity: 1,
+      },
+      "-=500",
+    )
+    .add("#services-container", {
       y: is_mobile ? "-90%" : "-100%",
     });
 };

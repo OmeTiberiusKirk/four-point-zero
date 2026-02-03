@@ -1,13 +1,13 @@
 "use client";
 
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 export default function Services() {
   return (
     <div style={{ minHeight: "calc(100vh * 2.5)" }}>
       <div
-        id="service-container"
-        className={twMerge([
+        id="services-container"
+        className={cn([
           "fixed",
           "w-full",
           "max-w-7xl",
@@ -17,8 +17,8 @@ export default function Services() {
         ])}
       >
         <div
-          id="service-heading-container"
-          className={twMerge([
+          id="services-heading-container"
+          className={cn([
             "absolute",
             "w-full",
             "h-full",
@@ -28,11 +28,11 @@ export default function Services() {
           ])}
         >
           <div
-            id="service-heading"
-            className={twMerge(["align-baseline", "opacity-0"])}
+            id="services-heading"
+            className={cn(["align-baseline", "opacity-0"])}
           >
             <span
-              className={twMerge([
+              className={cn([
                 "text-[2.8em]",
                 "font-bold",
                 "text-[#BC180C]",
@@ -43,7 +43,7 @@ export default function Services() {
             </span>
             &nbsp;
             <span
-              className={twMerge([
+              className={cn([
                 "text-[2em]",
                 "font-bold",
                 "text-[#BC180C]",
@@ -56,20 +56,19 @@ export default function Services() {
           </div>
         </div>
 
-        <p id="descr" className={twMerge(["max-w-2xs", "opacity-0", "mt-45"])}>
+        <p id="descr" className={cn(["max-w-2xs", "opacity-0", "mt-45"])}>
           เรามีผู้เชี่ยวชาญด้านการวางระบบสารสนเทศ ออกแบบ จัดหา ติดตั้ง
           บริหารจัดการและซ่อมบำรุง โดยทีมงานผู้ชำนาญ
         </p>
 
         <div
-          id="sv"
-          className={twMerge([
+          id="services-list"
+          className={cn([
             "mt-5",
             "grid",
             "sm:grid-cols-2",
             "gap-3",
             "sm:max-w-3/5",
-            "opacity-0",
           ])}
         >
           {services.map((service, k) => (
@@ -83,9 +82,9 @@ export default function Services() {
 
 const Service = ({ service, index }: { service: string[]; index: number }) => {
   return (
-    <div className={twMerge(["bg-white", "p-5"])}>
+    <div className={cn(["bg-white", "p-5", "opacity-0"])}>
       {icons[index]}
-      <h4 className={twMerge(["font-bold", "mb-3", "mt-8"])}>{service[0]}</h4>
+      <h4 className={cn(["font-bold", "mb-3", "mt-8"])}>{service[0]}</h4>
       <p>{service[1]}</p>
     </div>
   );

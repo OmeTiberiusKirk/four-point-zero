@@ -27,7 +27,7 @@ export default function Tagline() {
 
     const main_tl = createTimeline({
       onUpdate: (self) => {
-        // console.log(self.currentTime);
+        console.log(self.currentTime);
         if (self.currentTime >= 1000) self.pause();
       },
     })
