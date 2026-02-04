@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("dark")}>
+    <html lang="en" className={cn("")}>
       <body
         className={cn([
           "antialiased",
