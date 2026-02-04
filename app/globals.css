@@ -140,6 +140,11 @@ html:not(.dark) #main {
   background-attachment: fixed;
 }
 
-/* body {
-  overflow-x: hidden;
-} */
+#services-wrapper {
+  min-height: calc(100vh * 2.7);
+}
+@media screen and (width < 48rem) {
+  #services-wrapper {
+    min-height: calc(100vh * 2.3);
+  }
+}

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <div style={{ minHeight: "calc(100vh * 2.5)" }}>
+    <div id="services-wrapper">
       <div
         id="services-container"
         className={cn([
