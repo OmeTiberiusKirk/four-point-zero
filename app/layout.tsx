@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navigation } from "./components/navigation";
-import { twMerge } from "tailwind-merge";
 import { IBM_Plex_Sans_Thai } from "next/font/google";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,20 +20,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("dark")}>
       <body
-        className={twMerge([
+        className={cn([
           "antialiased",
           "flex",
           "justify-center",
-          "bg-gray-200",
           plex_sans.className,
         ])}
       >
         <Navigation />
         <main
           id="main"
-          className={twMerge(["w-full", "max-w-7xl", "shadow-xl"])}
+          className={cn(
+            "w-full",
+            "max-w-7xl",
+            "shadow-xl",
+            "relative",
+            "overflow-x-hidden",
+          )}
         >
           {children}
         </main>

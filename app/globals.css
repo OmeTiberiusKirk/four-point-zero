@@ -44,41 +44,6 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
-
-  --animate-to-right: to-right 1s ease-in-out;
-  --animate-to-left: to-left 1s ease-in-out;
-  --animate-to-top: to-top 1s ease-in-out;
-
-  @keyframes to-right {
-    from {
-      left: 0;
-    }
-    to {
-      left: 300;
-    }
-  }
-
-  @keyframes to-left {
-    0% {
-      transform: translate(100%, 0);
-      opacity: 0;
-    }
-    100% {
-      transform: translate(0, 0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes to-top {
-    0% {
-      transform: translate(0, 600px);
-      /* opacity: 0; */
-    }
-    100% {
-      transform: translate(0, 0);
-      /* opacity: 1; */
-    }
-  }
 }
 
 :root {
@@ -89,8 +54,8 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  /* --primary: oklch(0.205 0 0); */
-  --primary: #781b15;
+  --primary: oklch(0.205 0 0);
+  /* --primary: #781b15; */
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -160,7 +125,7 @@
   }
 }
 
-#main {
+html:not(.dark) #main {
   background: #dedede;
   background: linear-gradient(
     45deg,

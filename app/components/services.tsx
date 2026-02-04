@@ -83,7 +83,8 @@ export default function Services() {
           alt=""
           className={cn(
             "absolute",
-            "md:w-32",
+            "w-20",
+            "md:w-28",
             "shapes",
             "right-0",
             "top-1/3",
@@ -95,7 +96,8 @@ export default function Services() {
           alt=""
           className={cn(
             "absolute",
-            "md:w-32",
+            "w-20",
+            "md:w-28",
             "shapes",
             "right-0",
             "top-1/3",
@@ -107,7 +109,8 @@ export default function Services() {
           alt=""
           className={cn(
             "absolute",
-            "md:w-32",
+            "w-20",
+            "md:w-28",
             "shapes",
             "right-0",
             "top-1/3",
@@ -119,7 +122,8 @@ export default function Services() {
           alt=""
           className={cn(
             "absolute",
-            "md:w-32",
+            "w-20",
+            "md:w-28",
             "shapes",
             "right-0",
             "top-1/4",
@@ -131,7 +135,8 @@ export default function Services() {
           alt=""
           className={cn(
             "absolute",
-            "md:w-32",
+            "w-20",
+            "md:w-28",
             "shapes",
             "right-0",
             "top-1/4",
@@ -143,7 +148,8 @@ export default function Services() {
           alt=""
           className={cn(
             "absolute",
-            "md:w-32",
+            "w-20",
+            "md:w-28",
             "shapes",
             "right-0",
             "top-1/4",
@@ -157,7 +163,7 @@ export default function Services() {
 
 const Service = ({ service, index }: { service: string[]; index: number }) => {
   return (
-    <div className={cn(["bg-white", "p-5", "opacity-0"])}>
+    <div className={cn("bg-white", "dark:bg-gray-800", "p-5", "opacity-0")}>
       {icons[index]}
       <h4 className={cn(["font-bold", "mb-3", "mt-8"])}>{service[0]}</h4>
       <p>{service[1]}</p>

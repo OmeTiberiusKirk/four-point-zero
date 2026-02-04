@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Bars } from "./icons";
+import { cn } from "@/lib/utils";
 
 export function Navigation() {
   return (
@@ -9,26 +10,31 @@ export function Navigation() {
       className={[
         "fixed",
         "top-0",
-        "flex",
-        "justify-end",
         "w-full",
         "max-w-7xl",
         "z-10",
+        "text-end",
       ].join(" ")}
     >
       <Button
-        className={["rounded-none", "text-2xl", "font-bold"].join(" ")}
+        className={cn(
+          "rounded-none",
+          "text-2xl",
+          "font-bold",
+          "bg-[#781b15]",
+          "dark:bg-gray-500",
+        )}
         size="lg"
       >
         Contact Us
       </Button>
-      <Button
+      {/* <Button
         className={["rounded-none", "border-none", "shadow-none"].join(" ")}
         variant="outline"
         size="lg"
       >
         <Bars />
-      </Button>
+      </Button> */}
     </div>
   );
 }
