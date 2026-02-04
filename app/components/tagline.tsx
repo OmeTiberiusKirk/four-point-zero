@@ -41,7 +41,7 @@ export default function Tagline() {
       .add(
         ".shapes",
         {
-          opacity: 0.8,
+          opacity: 1,
           x: () => utils.random(-100, -1000, 2),
           y: () => utils.random(20, 40, 2) + "rem",
           rotate: () => utils.random(0, 180),

@@ -10,6 +10,7 @@ export default function Contact() {
         "items-center",
         "p-5",
         "sm:p-0",
+        "z-10",
       ])}
     >
       <div

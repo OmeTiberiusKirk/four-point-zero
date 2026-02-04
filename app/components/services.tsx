@@ -163,7 +163,9 @@ export default function Services() {
 
 const Service = ({ service, index }: { service: string[]; index: number }) => {
   return (
-    <div className={cn("bg-white", "dark:bg-gray-800", "p-5", "opacity-0")}>
+    <div
+      className={cn("bg-white", "dark:bg-gray-800", "p-5", "opacity-0", "z-10")}
+    >
       {icons[index]}
       <h4 className={cn(["font-bold", "mb-3", "mt-8"])}>{service[0]}</h4>
       <p>{service[1]}</p>
