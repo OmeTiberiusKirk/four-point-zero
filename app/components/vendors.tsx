@@ -11,14 +11,16 @@ const images = [hewlett, veritas, ms, oracle, vm];
 export default function Vendors() {
   return (
     <div
-      className={cn([
+      className={cn(
+        "relative",
         "bg-white",
         "dark:bg-gray-800",
         "md:px-10",
         "flex",
         "items-center",
         "flex-wrap",
-      ])}
+        "z-10",
+      )}
     >
       {images.map((img, k) => (
         <Vendor key={k} src={img} />

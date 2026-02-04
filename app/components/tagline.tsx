@@ -43,9 +43,9 @@ export default function Tagline() {
         {
           opacity: 1,
           x: () => utils.random(-100, -1000, 2),
-          y: () => utils.random(20, 40, 2) + "rem",
+          y: () => utils.random(15, 30, 2) + "rem",
           rotate: () => utils.random(0, 180),
-          scale: () => utils.random(0.25, 1.5, 3),
+          scale: () => utils.random(1, 1.5, 3),
           duration: 2500,
           ...(is_mobile_view() && {
             scale: () => utils.random(0.25, 1.3, 3),

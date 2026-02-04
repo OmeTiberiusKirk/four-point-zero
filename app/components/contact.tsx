@@ -1,9 +1,10 @@
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 export default function Contact() {
   return (
     <div
-      className={twMerge([
+      className={cn(
+        "relative",
         "min-h-70",
         "bg-[#161616D9]",
         "sm:flex",
@@ -11,10 +12,10 @@ export default function Contact() {
         "p-5",
         "sm:p-0",
         "z-10",
-      ])}
+      )}
     >
       <div
-        className={twMerge([
+        className={cn(
           "flex-1",
           "text-center",
           "text-white",
@@ -22,7 +23,7 @@ export default function Contact() {
           "text-5xl",
           "mb-5",
           "sm:mb-0",
-        ])}
+        )}
       >
         <h1 className="mb-2">Let’s</h1>
         <h1 className="mb-2">get in</h1>
@@ -30,7 +31,7 @@ export default function Contact() {
       </div>
 
       <div
-        className={twMerge([
+        className={cn([
           "flex-1",
           "sm:pr-20",
           "grid",
@@ -41,7 +42,7 @@ export default function Contact() {
       >
         <input
           type="text"
-          className={twMerge([
+          className={cn([
             "focus-visible:outline-0",
             "border-b",
             "border-white",
@@ -51,7 +52,7 @@ export default function Contact() {
 
         <input
           type="text"
-          className={twMerge([
+          className={cn([
             "focus-visible:outline-0",
             "border-b",
             "border-white",
@@ -61,7 +62,7 @@ export default function Contact() {
 
         <input
           type="text"
-          className={twMerge([
+          className={cn([
             "focus-visible:outline-0",
             "border-b",
             "border-white",
@@ -70,7 +71,7 @@ export default function Contact() {
         />
 
         <select
-          className={twMerge([
+          className={cn([
             "focus-visible:outline-0",
             "border-b",
             "border-white",
@@ -84,7 +85,7 @@ export default function Contact() {
 
         <textarea
           placeholder="รายละเอียด"
-          className={twMerge([
+          className={cn([
             "focus-visible:outline-0",
             "border-b",
             "border-white",
@@ -99,7 +100,7 @@ export default function Contact() {
 
         <div className="text-right">
           <button
-            className={twMerge([
+            className={cn([
               "bg-[#FFFFFF1A]",
               "px-4",
               "py-1",
