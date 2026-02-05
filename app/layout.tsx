@@ -20,10 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("")}>
+    <html lang="en" className={cn("dark")}>
       <body className={cn("antialiased", plex_sans.className)}>
-        <Navigation />
-        {children}
+        <div className={cn("w-full", "max-w-7xl")}>
+          <Navigation />
+          {children}
+        </div>
       </body>
     </html>
   );

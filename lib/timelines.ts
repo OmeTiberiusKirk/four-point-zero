@@ -63,26 +63,25 @@ const create_services_heading_tl = () => {
 
   return createTimeline({
     defaults: { ease: "out" },
-  })
-    .add("#services-heading", {
-      opacity: 1,
-      x: -($con.clientWidth / 2 - ($svh.clientWidth / 2 + 10)),
-      y: -($con.clientHeight / 2 - $svh.clientHeight * 1.7),
-    })
-    .add(
-      "#services-heading :first-child",
-      {
-        y: "-70%",
-      },
-      "-=1000",
-    )
-    .add(
-      "#services-heading :last-child",
-      {
-        x: "-100%",
-      },
-      "-=500",
-    );
+  }).add("#services-heading", {
+    opacity: 1,
+    // x: -($con.clientWidth / 2 - ($svh.clientWidth / 2 + 10)),
+    // y: -($con.clientHeight / 2 - $svh.clientHeight * 1.7),
+  });
+  // .add(
+  //   "#services-heading :first-child",
+  //   {
+  //     y: "-70%",
+  //   },
+  //   "-=1000",
+  // )
+  // .add(
+  //   "#services-heading :last-child",
+  //   {
+  //     x: "-100%",
+  //   },
+  //   "-=500",
+  // );
 };
 
 const create_services_tl = () => {
@@ -101,14 +100,6 @@ const create_services_tl = () => {
         opacity: 1,
       },
       "-=500",
-    )
-    .add(
-      "#services-container",
-      {
-        duration: 3000,
-        y: is_mobile ? "-100%" : "-100%",
-      },
-      "-=700",
     );
 };
 

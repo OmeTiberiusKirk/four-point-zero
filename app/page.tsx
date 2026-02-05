@@ -62,11 +62,6 @@ export default function Home() {
     if (window.pageYOffset > 0) {
       main_tl.seek(offset + window.pageYOffset * 2);
     }
-
-    const svc = document.querySelector("#services-container");
-    const svw = document.querySelector("#services-wrapper");
-    // if (svc) (svw as HTMLElement).style.minHeight = `${svc.clientHeight}px`;
-    if (svc) (svw as HTMLElement).style.minHeight = "300vh";
   }, []);
 
   return (

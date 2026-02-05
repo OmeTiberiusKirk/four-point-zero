@@ -3,95 +3,71 @@ import circle from "../../images/circle.png";
 import square from "../../images/square.png";
 import triangle from "../../images/triangle.png";
 import Image from "next/image";
-import Vendors from "./vendors";
-import Contact from "./contact";
 
 export default function Services() {
   return (
-    <section id="services-wrapper">
+    <section className={cn("relative", "min-h-screen")}>
       <div
-        id="services-container"
-        className={cn("fixed", "top-0", "left-0", "w-full")}
+        id="services-heading"
+        className={cn(["align-baseline", "opacity-0"])}
       >
-        <div className={cn("relative", "pt-45", "px-5")}>
-          <div
-            id="services-heading-container"
-            className={cn([
-              "absolute",
-              "w-full",
-              "h-full",
-              "flex",
-              "justify-center",
-              "items-center",
-              "top-0",
-            ])}
-          >
-            <div
-              id="services-heading"
-              className={cn(["align-baseline", "opacity-0"])}
-            >
-              <span
-                className={cn([
-                  "text-[2.8em]",
-                  "font-bold",
-                  "text-[#BC180C]",
-                  "inline-block",
-                ])}
-              >
-                การบริการ
-              </span>
-              &nbsp;
-              <span
-                className={cn([
-                  "text-[2em]",
-                  "font-bold",
-                  "text-[#BC180C]",
-                  "mb-5",
-                  "inline-block",
-                ])}
-              >
-                (Service)
-              </span>
-            </div>
-          </div>
-          <p id="descr" className={cn(["max-w-2xs", "opacity-0"])}>
-            เรามีผู้เชี่ยวชาญด้านการวางระบบสารสนเทศ ออกแบบ จัดหา ติดตั้ง
-            บริหารจัดการและซ่อมบำรุง โดยทีมงานผู้ชำนาญ
-          </p>
-          <div
-            id="services-list"
-            className={cn([
-              "mt-5",
-              "grid",
-              "sm:grid-cols-2",
-              "gap-3",
-              "sm:max-w-3/5",
-            ])}
-          >
-            {services.map((service, k) => (
-              <Service key={k} index={k} service={service} />
-            ))}
-          </div>
-        </div>
-        {[circle, square, triangle, circle, square, triangle].map((src, k) => (
-          <Image
-            key={k}
-            src={src}
-            alt=""
-            className={cn(
-              "absolute",
-              "w-20",
-              "md:w-28",
-              "shapes",
-              "right-0",
-              "top-10",
-              "opacity-0",
-            )}
-          />
-        ))}
-        <Vendors />
-        <Contact />
+        <span
+          className={cn([
+            "text-[2.8em]",
+            "font-bold",
+            "text-[#BC180C]",
+            "inline-block",
+          ])}
+        >
+          การบริการ
+        </span>
+        &nbsp;
+        <span
+          className={cn([
+            "text-[2em]",
+            "font-bold",
+            "text-[#BC180C]",
+            "mb-5",
+            "inline-block",
+          ])}
+        >
+          (Service)
+        </span>
       </div>
+      <p id="descr" className={cn(["max-w-2xs", "opacity-0"])}>
+        เรามีผู้เชี่ยวชาญด้านการวางระบบสารสนเทศ ออกแบบ จัดหา ติดตั้ง
+        บริหารจัดการและซ่อมบำรุง โดยทีมงานผู้ชำนาญ
+      </p>
+      <div
+        id="services-list"
+        className={cn([
+          "mt-5",
+          "grid",
+          "sm:grid-cols-2",
+          "gap-3",
+          "sm:max-w-3/5",
+        ])}
+      >
+        {services.map((service, k) => (
+          <Service key={k} index={k} service={service} />
+        ))}
+      </div>
+      {[circle, square, triangle, circle, square, triangle].map((src, k) => (
+        <Image
+          key={k}
+          src={src}
+          alt=""
+          className={cn(
+            "absolute",
+            "w-20",
+            "md:w-28",
+            "shapes",
+            "right-0",
+            "top-10",
+            "opacity-0",
+          )}
+        />
+      ))}
     </section>
   );
 }
