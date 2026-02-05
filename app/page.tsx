@@ -55,7 +55,7 @@ export default function Home() {
       );
 
     window.addEventListener("scroll", () => {
-      console.log("scroll", window.pageYOffset * 2 + 1500);
+      // console.log("scroll", window.pageYOffset * 2 + 1500);
       main_tl.seek(offset + window.pageYOffset * 2);
     });
 
@@ -65,7 +65,8 @@ export default function Home() {
 
     const svc = document.querySelector("#services-container");
     const svw = document.querySelector("#services-wrapper");
-    if (svc) (svw as HTMLElement).style.minHeight = `${svc.clientHeight}px`;
+    // if (svc) (svw as HTMLElement).style.minHeight = `${svc.clientHeight}px`;
+    if (svc) (svw as HTMLElement).style.minHeight = "300vh";
   }, []);
 
   return (
