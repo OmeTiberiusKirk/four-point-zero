@@ -21,27 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("")}>
-      <body
-        className={cn([
-          "antialiased",
-          "flex",
-          "justify-center",
-          plex_sans.className,
-        ])}
-      >
+      <body className={cn("antialiased", plex_sans.className)}>
         <Navigation />
-        <main
-          id="main"
-          className={cn(
-            "w-full",
-            "max-w-7xl",
-            "shadow-xl",
-            "relative",
-            "overflow-x-hidden",
-          )}
-        >
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );

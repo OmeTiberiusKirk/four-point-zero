@@ -8,9 +8,12 @@ import Contact from "./contact";
 
 export default function Services() {
   return (
-    <div id="services-wrapper">
-      <div id="services-container" className={cn("fixed", "top-0")}>
-        <div className={cn("w-full", "max-w-7xl", "relative", "pt-45", "px-5")}>
+    <section id="services-wrapper">
+      <div
+        id="services-container"
+        className={cn("fixed", "top-0", "left-0", "w-full")}
+      >
+        <div className={cn("relative", "pt-45", "px-5")}>
           <div
             id="services-heading-container"
             className={cn([
@@ -51,12 +54,10 @@ export default function Services() {
               </span>
             </div>
           </div>
-
           <p id="descr" className={cn(["max-w-2xs", "opacity-0"])}>
             เรามีผู้เชี่ยวชาญด้านการวางระบบสารสนเทศ ออกแบบ จัดหา ติดตั้ง
             บริหารจัดการและซ่อมบำรุง โดยทีมงานผู้ชำนาญ
           </p>
-
           <div
             id="services-list"
             className={cn([
@@ -72,7 +73,6 @@ export default function Services() {
             ))}
           </div>
         </div>
-
         {[circle, square, triangle, circle, square, triangle].map((src, k) => (
           <Image
             key={k}
@@ -89,11 +89,10 @@ export default function Services() {
             )}
           />
         ))}
-
         <Vendors />
         <Contact />
       </div>
-    </div>
+    </section>
   );
 }
 

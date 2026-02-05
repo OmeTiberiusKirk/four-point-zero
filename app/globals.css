@@ -129,7 +129,7 @@
   }
 }
 
-html:not(.dark) #main {
+html:not(.dark) body {
   background: #dedede;
   background: linear-gradient(
     45deg,
@@ -141,7 +141,7 @@ html:not(.dark) #main {
 }
 
 #services-wrapper {
-  min-height: calc(100vh * 5);
+  min-height: calc(100vh * 3);
 }
 @media screen and (width < 48rem) {
   #services-wrapper {
