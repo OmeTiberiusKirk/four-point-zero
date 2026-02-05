@@ -20,6 +20,7 @@ export default function Vendors() {
         "items-center",
         "flex-wrap",
         "z-10",
+        "mt-40",
       )}
     >
       {images.map((img, k) => (

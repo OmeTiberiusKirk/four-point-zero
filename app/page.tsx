@@ -8,8 +8,8 @@ export default function Home() {
     <>
       <Tagline />
       <Services />
-      <Vendors />
-      <Contact />
+      {/* <Vendors /> */}
+      {/* <Contact /> */}
     </>
   );
 }

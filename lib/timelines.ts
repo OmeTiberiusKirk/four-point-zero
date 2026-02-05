@@ -105,9 +105,10 @@ const create_services_tl = () => {
     .add(
       "#services-container",
       {
+        duration: 3000,
         y: is_mobile ? "-100%" : "-100%",
       },
-      // "-=500",
+      "-=700",
     );
 };
 
