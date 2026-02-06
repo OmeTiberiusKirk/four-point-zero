@@ -14,7 +14,14 @@ export default function Tagline() {
       )}
     >
       <div
-        className={cn("fixed", "flex", "flex-col", "items-center", "w-full")}
+        className={cn(
+          "fixed",
+          "flex",
+          "flex-col",
+          "items-center",
+          "w-full",
+          "max-w-7xl",
+        )}
       >
         <div
           id="sat"
