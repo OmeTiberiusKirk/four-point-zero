@@ -8,8 +8,8 @@ import Contact from "./contact";
 
 export default function Services() {
   return (
-    <section className={cn("min-h-screen", "relative", "xl:px-0")}>
-      <div className="px-4">
+    <section className={cn("min-h-screen", "relative")}>
+      <div className={cn("px-4", "lg:px-0")}>
         <div id="services-heading" className={cn("opacity-0")}>
           <h1 className={cn("text-[2.8em]", "font-bold", "text-[#BC180C]")}>
             การบริการ
