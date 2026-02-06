@@ -92,10 +92,10 @@ const create_services_tl = () => {
     .add(
       "#services-list > div",
       {
-        delay: stagger(100),
+        delay: stagger(200),
         opacity: 1,
       },
-      "-=1100",
+      "-=1000",
     )
     .add(
       ".shapes",
@@ -104,14 +104,14 @@ const create_services_tl = () => {
         x: () => utils.random(-5, -80) + "rem",
         y: () => utils.random(20, 50) + "rem",
         rotate: () => utils.random(0, 180),
-        scale: () => utils.random(1, 1.5, 3),
+        scale: () => utils.random(0.25, 1.5, 3),
         duration: 1500,
         ...(is_mobile_view() && {
-          scale: () => utils.random(0.25, 1.3, 3),
-          x: () => utils.random(-50, -500, 2),
+          scale: () => utils.random(0.25, 1, 3),
+          x: () => utils.random(-5, -20) + "rem",
         }),
       },
-      "-=1000",
+      is_mobile_view() ? "-=1600" : "-=1000",
     );
 };
 
