@@ -83,7 +83,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  --card-background: oklch(100% 0.00011 271.152 / 0.856);
+  --card-background: oklch(100% 0.00011 271.152 / 0.616);
 }
 
 .dark {
@@ -139,12 +139,3 @@ html:not(.dark) body {
 
   background-attachment: fixed;
 }
-
-/* #services-wrapper {
-  min-height: calc(100vh * 2.8)
-}
-@media screen and (width < 48rem) {
-  #services-wrapper {
-    min-height: calc(100vh * 2.3);
-  }
-} */

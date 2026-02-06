@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Bars } from "./icons";
 import { cn } from "@/lib/utils";
 
 export function Navigation() {
@@ -12,7 +11,7 @@ export function Navigation() {
         "top-0",
         "w-full",
         "max-w-7xl",
-        "z-10",
+        "z-20",
         "text-end",
       ].join(" ")}
     >

@@ -6,47 +6,44 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section className={cn("relative", "min-h-screen")}>
-      <div
-        id="services-heading"
-        className={cn(["align-baseline", "opacity-0"])}
-      >
+    <section className={cn("min-h-screen", "relative")}>
+      <div id="services-heading" className={cn("align-baseline")}>
         <span
-          className={cn([
+          className={cn(
             "text-[2.8em]",
             "font-bold",
             "text-[#BC180C]",
             "inline-block",
-          ])}
+          )}
         >
           การบริการ
         </span>
         &nbsp;
         <span
-          className={cn([
+          className={cn(
             "text-[2em]",
             "font-bold",
             "text-[#BC180C]",
             "mb-5",
             "inline-block",
-          ])}
+          )}
         >
           (Service)
         </span>
       </div>
-      <p id="descr" className={cn(["max-w-2xs", "opacity-0"])}>
+      <p id="descr" className={cn("max-w-2xs", "opacity-0", "mt-10")}>
         เรามีผู้เชี่ยวชาญด้านการวางระบบสารสนเทศ ออกแบบ จัดหา ติดตั้ง
         บริหารจัดการและซ่อมบำรุง โดยทีมงานผู้ชำนาญ
       </p>
       <div
         id="services-list"
-        className={cn([
+        className={cn(
           "mt-5",
           "grid",
           "sm:grid-cols-2",
           "gap-3",
           "sm:max-w-3/5",
-        ])}
+        )}
       >
         {services.map((service, k) => (
           <Service key={k} index={k} service={service} />

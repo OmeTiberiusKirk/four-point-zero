@@ -1,30 +1,24 @@
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 import glider from "../../images/glider.png";
 import Image from "next/image";
 
 export default function Tagline() {
   return (
     <section
-      className={twMerge([
+      className={cn(
         "min-h-screen",
         "flex",
         "flex-col",
         "justify-center",
         "overflow-hidden",
-      ])}
+      )}
     >
       <div
-        className={twMerge([
-          "fixed",
-          "flex",
-          "flex-col",
-          "items-center",
-          "w-full",
-        ])}
+        className={cn("fixed", "flex", "flex-col", "items-center", "w-full")}
       >
         <div
           id="sat"
-          className={twMerge(["flex", "items-baseline", "opacity-0"])}
+          className={cn("flex", "items-baseline", "opacity-0")}
           style={{
             background: "linear-gradient(90deg, #240b36 0.3%, #c31432 102.17%)",
             backgroundClip: "text",
@@ -32,18 +26,10 @@ export default function Tagline() {
             WebkitTextFillColor: "transparent",
           }}
         >
-          <h1
-            className={twMerge([
-              "text-[1.5em]",
-              "md:text-[3.5em]",
-              "font-bold",
-            ])}
-          >
+          <h1 className={cn("text-[1.5em]", "md:text-[3.5em]", "font-bold")}>
             “ความพึงพอใจ
           </h1>
-          <h1
-            className={twMerge(["text-[1.7em]", "md:text-[3em]", "font-bold"])}
-          >
+          <h1 className={cn("text-[1.7em]", "md:text-[3em]", "font-bold")}>
             ของท่าน
           </h1>
         </div>
@@ -57,23 +43,19 @@ export default function Tagline() {
             WebkitTextFillColor: "transparent",
             opacity: 0,
           }}
-          className={twMerge(["flex", "items-baseline"])}
+          className={cn("flex", "items-baseline")}
         >
-          <h1
-            className={twMerge(["text-[1.7em]", "md:text-[3em]", "font-bold"])}
-          >
+          <h1 className={cn("text-[1.7em]", "md:text-[3em]", "font-bold")}>
             คือความสำเร็จของเรา
           </h1>
-          <h1
-            className={twMerge(["text-[1.7em]", "md:text-[3em]", "font-bold"])}
-          >
+          <h1 className={cn("text-[1.7em]", "md:text-[3em]", "font-bold")}>
             ”
           </h1>
         </div>
 
         <blockquote
           id="exp"
-          className={twMerge([
+          className={cn(
             "mt-4",
             "border-l-3",
             "pl-3",
@@ -84,7 +66,7 @@ export default function Tagline() {
             "opacity-0",
             "text-[0.8em]",
             "md:text-[1em]",
-          ])}
+          )}
         >
           Customer Experience <br />
           สร้างประสบการณ์ที่ดีให้กับลูกค้า
@@ -94,7 +76,7 @@ export default function Tagline() {
           id="glider"
           src={glider}
           alt=""
-          className={twMerge([
+          className={cn([
             "w-20",
             "md:w-40",
             "absolute",
