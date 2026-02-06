@@ -18,12 +18,12 @@ export function Navigation() {
       <Button
         className={cn(
           "rounded-none",
-          "text-2xl",
+          "md:text-2xl",
           "font-bold",
           "bg-[#781b15]",
           "dark:bg-gray-500",
         )}
-        size="lg"
+        // size="default"
       >
         Contact Us
       </Button>
