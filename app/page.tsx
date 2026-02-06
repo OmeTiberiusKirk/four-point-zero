@@ -4,15 +4,7 @@ import Services from "./components/services";
 import Tagline from "./components/tagline";
 import { createTimeline, utils } from "animejs";
 import { useEffect } from "react";
-import {
-  create_exp_tl,
-  create_glider_tl,
-  create_sat_tl,
-  create_services_heading_tl,
-  create_services_tl,
-  create_success_tl,
-  create_tagline_tl,
-} from "@/lib/timelines";
+import { create_services_tl, create_tagline_tl } from "@/lib/timelines";
 import { is_mobile_view } from "@/lib/utils";
 import Vendors from "./components/vendors";
 import Contact from "./components/contact";
