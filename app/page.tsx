@@ -2,12 +2,9 @@
 
 import Services from "./components/services";
 import Tagline from "./components/tagline";
-import { createTimeline, utils } from "animejs";
+import { createTimeline } from "animejs";
 import { useEffect } from "react";
 import { create_services_tl, create_tagline_tl } from "@/lib/timelines";
-import { is_mobile_view } from "@/lib/utils";
-import Vendors from "./components/vendors";
-import Contact from "./components/contact";
 
 export default function Home() {
   const getScrollProgress = () => {
@@ -43,8 +40,6 @@ export default function Home() {
     <>
       <Tagline />
       <Services />
-      <Vendors />
-      <Contact />
     </>
   );
 }
